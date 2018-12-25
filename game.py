@@ -68,15 +68,12 @@ class Mario(pygame.sprite.Sprite):
 	def checkCollision(self, sprite1, sprite2):
 		# Check left of brick
 		if (sprite1.rect.x + self.model.cameraPosition + sprite1.rect.w < sprite2.rect.x):
-			print("left")
 			return False
 		# Check right of brick
 		elif (sprite1.rect.x + self.model.cameraPosition > sprite2.rect.x + sprite2.rect.w):
-			print("right")
 			return False
 		# Check top of the brick
 		elif (sprite1.rect.y + sprite1.rect.h < sprite2.rect.y):
-			print("top")
 			return False
 		# Check bottom of brick
 		elif (sprite1.rect.y > sprite2.rect.y + sprite2.rect.h):
